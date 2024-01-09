@@ -57,6 +57,8 @@ public:
     void keyNoteOn( const int note, const int velo);
     void keyNoteOff( const int note);
 
+	std::function<void(int)> onRightClick;
+
 signals:
     void noteOn(int n, int v);
     void noteOff(int n);

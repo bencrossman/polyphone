@@ -8,3 +8,9 @@ lib_*
 .DS_Store
 /fedora
 /debian
+/sources/release
+/sources/debug
+/sources/ui_*.h
+/sources/mocinclude.opt
+/sources/object_script.polyphone.Debug
+/sources/object_script.polyphone.Release

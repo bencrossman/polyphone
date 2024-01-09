@@ -76,6 +76,8 @@ public:
 
     void inputNoteOn(int midiNote, int vel = -1);
     void inputNoteOff(int midiNote);
+	
+	void SetOnRightClick(std::function<void(int)> f);
 
 signals:
     void mouseOver(int midiNote, int vel);

@@ -97,6 +97,8 @@ PageSmpl::PageSmpl(QWidget *parent) :
         delete ui->label_20;
         delete ui->label_21;
     }
+	
+	ContextManager::midi()->keyboard()->SetOnRightClick([this](int key) { ui->spinRootKey->setValue(key); });
 }
 
 PageSmpl::~PageSmpl()

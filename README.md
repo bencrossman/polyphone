@@ -31,3 +31,21 @@ See the [documentation](https://www.polyphone-soundfonts.com/documentation) and 
 - - - - 
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ESBLSGPJ7P938&lc=US&item_name=Polyphone%20project)
+
+
+
+
+MSYS2
+
+MSYS2_MINGW32
+
+pacman -Syuu
+pacman -Ss "searchfor"
+
+pacman -S mingw-w64-i686-toolchain mingw-w64-i686-qt5-base mingw-w64-i686-qt5-svg mingw-w64-i686-qt5-tools mingw-w64-i686-libvorbis mingw-w64-i686-flac mingw-w64-i686-portaudio mingw-w64-i686-libogg
+qmake
+make
+
+
+
+

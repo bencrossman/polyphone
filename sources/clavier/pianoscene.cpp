@@ -308,6 +308,14 @@ void PianoScene::mouseMoveEvent(QGraphicsSceneMouseEvent * mouseEvent)
 void PianoScene::mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent)
 {
     PianoKey* key = getKeyForPos(mouseEvent->scenePos());
+	
+	if (mouseEvent->button() == 2)
+	{
+		onRightClick(key->getNote());
+		return;
+	}	
+	
+	
     if (key != nullptr && !key->isPressed())
     {
         keyOn(key, getPressureFromPos(mouseEvent->scenePos(), key->isBlack()));

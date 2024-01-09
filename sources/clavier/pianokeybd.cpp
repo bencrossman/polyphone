@@ -196,3 +196,8 @@ void PianoKeybd::onPolyPressureChanged(int k,int v)
 {
     QApplication::postEvent(ContextManager::midi(), new PolyPressureEvent(m_channel, k, v));
 }
+
+void PianoKeybd::SetOnRightClick(std::function<void(int)> f)
+{ 
+	m_scene->onRightClick = f; 
+}
