@@ -29,6 +29,7 @@
 #include "graphicsviewrange.h"
 #include "utils.h"
 #include "modulatoreditor.h"
+#include "pianokeybdcustom.h"
 #include <QMenu>
 #include <QScrollBar>
 #include <QFontMetrics>
@@ -63,6 +64,8 @@ PageTable::PageTable(bool isPrst, QWidget *parent) : Page(parent, isPrst ? "page
 
 void PageTable::updateInterface(QString editingSource)
 {
+	ContextManager::midi()->keyboard()->SetOnRightClick(nullptr);
+
     // Check if the new parents are the same
     IdList parentIds = _currentIds.getSelectedIds(_isPrst ? elementPrst : elementInst);
     bool sameElement = true;

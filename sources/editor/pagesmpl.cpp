@@ -97,8 +97,6 @@ PageSmpl::PageSmpl(QWidget *parent) :
         delete ui->label_20;
         delete ui->label_21;
     }
-	
-	ContextManager::midi()->keyboard()->SetOnRightClick([this](int key) { ui->spinRootKey->setValue(key); });
 }
 
 PageSmpl::~PageSmpl()
@@ -110,6 +108,12 @@ void PageSmpl::updateInterface(QString editingSource)
 {
     if (editingSource == "page:smpl" || editingSource == "tree:remove") // tree:remove comes with a new selection
         return;
+
+	ContextManager::midi()->keyboard()->SetOnRightClick([this](int key)
+	{ 
+		ui->spinRootKey->setValue(key);
+		setRootKey();
+	});
 
     IdList ids = _currentIds.getSelectedIds(elementSmpl);
     int nombreElements = ids.size();

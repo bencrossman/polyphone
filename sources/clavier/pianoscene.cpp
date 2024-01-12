@@ -309,7 +309,7 @@ void PianoScene::mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent)
 {
     PianoKey* key = getKeyForPos(mouseEvent->scenePos());
 	
-	if (mouseEvent->button() == 2)
+	if (mouseEvent->button() == 2 && onRightClick)
 	{
 		onRightClick(key->getNote());
 		return;
