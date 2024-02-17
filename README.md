@@ -46,6 +46,8 @@ pacman -S mingw-w64-i686-toolchain mingw-w64-i686-qt5-base mingw-w64-i686-qt5-sv
 qmake
 make
 
+cd /C/Users/bencr/Desktop/Source/polyphone/sources/ ; make ; ../lib_windows/64bits/polyphone.exe
+
 
 
 
